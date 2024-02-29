@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 x 3 Grid - Sounding Text on Touch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 100px auto;
+    }
+    /* pagination */
+    .pagination {
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      min-height: 100vh;
+      font-size: 24px;
+      gap: 10px;
+      padding-right: 10px;
+    }
+    .page-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer; /* Add cursor pointer for touch indication */
+    }
+    .page-item i {
+      margin: 24px;
+      color: #007bff;
+    }
+
+    /* buttons */
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      min-height: 100vh;
+      font-size: 24px;
+      gap: 10px;
+    }
+    .button-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer; /* Add cursor pointer for touch indication */
+    }
+    .button-item i {
+      font-size: 48px;
+      color: #007bff;
+    }
+    
+    .hidden {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pagination">    
+    <div class="page-item" data-page="1" data-text="eat mat bathroom fix walk music drink different stop toy go on">
+      <i class="fas fa-1"></i>
+    </div>
+    <div class="page-item" data-page="2" data-text="test">
+      <i class="fas fa-2"></i>
+    </div>
+    <div class="page-item" data-page="3" data-text="">
+      <i class="fas fa-3"></i>
+    </div>
+    <div class="page-item" data-page="4" data-text="">
+      <i class="fas fa-4"></i>
+    </div>
+    <div class="page-item" data-page="5" data-text="">
+      <i class="fas fa-5"></i>
+    </div>
+  </div>
+  <div class="buttons buttons-1">
+    <div class="button-item" data-text="eat">
+        <i class="fas fa-utensils"></i>
+        <p>eat</p>
+    </div>
+    <div class="button-item" data-text="mat">
+        <i class="fas fa-bed"></i>
+        <p>mat</p>
+    </div>
+    <div class="button-item" data-text="bathroom">
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="fix">
+        <i class="fas fa-tools"></i>
+        <p>fix</p>
+    </div>
+    <div class="button-item" data-text="walk">
+        <i class="fas fa-walking"></i>
+        <p>walk</p>
+    </div>
+    <div class="button-item" data-text="music">
+        <i class="fas fa-music"></i>
+        <p>music</p>
+    </div>
+    <div class="button-item" data-text="drink">
+        <i class="fas fa-mug-hot"></i>
+        <p>drink</p>
+    </div>
+    <div class="button-item" data-text="different">
+        <i class="fas fa-exchange-alt"></i>
+        <p>different</p>
+    </div>
+    <div class="button-item" data-text="off">
+        <i class="fas fa-power-off"></i>
+        <p>off</p>
+    </div>
+    <div class="button-item" data-text="stop">
+        <i class="fas fa-stop-circle"></i>
+        <p>stop</p>
+    </div>
+    <div class="button-item" data-text="toy">
+        <i class="fas fa-child"></i>
+        <p>toy</p>
+    </div>
+    <div class="button-item" data-text="go">
+        <i class="fas fa-forward"></i>
+        <p>go</p>
+    </div>
+    <div class="button-item" data-text="on">
+        <i class="fas fa-lightbulb"></i>
+        <p>on</p>
+    </div>
+</div>
+<div class="buttons buttons-2 hidden">
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+    <div class="button-item" data-text="">
+        <!--
+        <i class="fas fa-bath"></i>
+        <p>bathroom</p>
+        -->
+    </div>
+</div>
+  <script>
+    document.querySelectorAll('.button-item').forEach(item => {
+      ['touchstart', 'click'].forEach(function(e) {
+        item.addEventListener(e, () => {
+            window.speechSynthesis.cancel();
+            const text = item.dataset.text;
+            // Use a Text-to-Speech API or library to sound out the text
+            // For example, using the SpeechSynthesis API:
+            if (window.speechSynthesis) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+            } else {
+            console.log(`Text to speech not supported. Text: ${text}`);
+            }
+        });
+      }) 
+    });
+
+    document.querySelectorAll('.page-item').forEach(item => {
+      ['touchstart', 'click'].forEach(function(e) {
+        item.addEventListener(e, () => {
+            const text = item.dataset.text;
+            if (text.length == 0) {
+                return;
+            }
+            
+            document.querySelectorAll('.buttons').forEach(item => {
+                item.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.buttons-' + item.dataset.page).forEach(item => {
+                item.classList.remove('hidden');
+            });
+            
+            // Use a Text-to-Speech API or library to sound out the text
+            // For example, using the SpeechSynthesis API:
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 2.5;
+                window.speechSynthesis.speak(utterance);
+            } else {
+            console.log(`Text to speech not supported. Text: ${text}`);
+            }
+        });
+      }) 
+    });
+  </script>
+</body>
+</html>
