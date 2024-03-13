@@ -1,0 +1,7 @@
+# Run with this:
+#  - docker run -d -p 8080:80 -v $HOME/prj/justin/web:/usr/share/nginx/html --name justin-app litdream092/justin-app
+
+FROM nginx:latest
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+

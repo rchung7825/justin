@@ -39,8 +39,8 @@
     /* buttons */
     .buttons {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       min-height: 100vh;
       font-size: 24px;
       gap: 10px;
@@ -68,10 +68,10 @@
 <body>
 
   <div class="pagination">    
-    <div class="page-item" data-page="1" data-text="eat mat bathroom fix walk music drink different stop toy go on">
+    <div class="page-item" data-page="1" data-text="eat mat bathroom fix walk music drink different ">
       <i class="fas fa-1"></i>
     </div>
-    <div class="page-item" data-page="2" data-text="test">
+    <div class="page-item" data-page="2" data-text="off stop toy go on">
       <i class="fas fa-2"></i>
     </div>
     <div class="page-item" data-page="3" data-text="">
@@ -97,12 +97,6 @@
         <i class="fas fa-bath"></i>
         <p>bathroom</p>
     </div>
-    <div class="button-item" data-text="">
-        <!--
-        <i class="fas fa-bath"></i>
-        <p>bathroom</p>
-        -->
-    </div>
     <div class="button-item" data-text="fix">
         <i class="fas fa-tools"></i>
         <p>fix</p>
@@ -123,59 +117,29 @@
         <i class="fas fa-exchange-alt"></i>
         <p>different</p>
     </div>
-    <div class="button-item" data-text="off">
-        <i class="fas fa-power-off"></i>
-        <p>off</p>
-    </div>
-    <div class="button-item" data-text="stop">
-        <i class="fas fa-stop-circle"></i>
-        <p>stop</p>
-    </div>
-    <div class="button-item" data-text="toy">
-        <i class="fas fa-child"></i>
-        <p>toy</p>
-    </div>
-    <div class="button-item" data-text="go">
-        <i class="fas fa-forward"></i>
-        <p>go</p>
-    </div>
-    <div class="button-item" data-text="on">
-        <i class="fas fa-lightbulb"></i>
-        <p>on</p>
-    </div>
 </div>
 <div class="buttons buttons-2 hidden">
-    <div class="button-item" data-text="">
-        <!--
-        <i class="fas fa-bath"></i>
-        <p>bathroom</p>
-        -->
-    </div>
-    <div class="button-item" data-text="">
-        <!--
-        <i class="fas fa-bath"></i>
-        <p>bathroom</p>
-        -->
-    </div>
-    <div class="button-item" data-text="">
-        <!--
-        <i class="fas fa-bath"></i>
-        <p>bathroom</p>
-        -->
-    </div>
-    <div class="button-item" data-text="">
-        <!--
-        <i class="fas fa-bath"></i>
-        <p>bathroom</p>
-        -->
-    </div>
-    <div class="button-item" data-text="">
-        <!--
-        <i class="fas fa-bath"></i>
-        <p>bathroom</p>
-        -->
-    </div>
-    <div class="button-item" data-text="">
+  <div class="button-item" data-text="on">
+    <i class="fas fa-lightbulb"></i>
+    <p>on</p>
+</div>
+<div class="button-item" data-text="stop">
+    <i class="fas fa-stop-circle"></i>
+    <p>stop</p>
+</div>
+<div class="button-item" data-text="toy">
+    <i class="fas fa-child"></i>
+    <p>toy</p>
+</div>
+<div class="button-item" data-text="go">
+    <i class="fas fa-forward"></i>
+    <p>go</p>
+</div>
+<div class="button-item" data-text="off">
+    <i class="fas fa-power-off"></i>
+    <p>off</p>
+</div>
+<div class="button-item" data-text="">
         <!--
         <i class="fas fa-bath"></i>
         <p>bathroom</p>
@@ -269,7 +233,7 @@
             if (window.speechSynthesis) {
                 window.speechSynthesis.cancel();
                 const utterance = new SpeechSynthesisUtterance(text);
-                utterance.rate = 2.5;
+                utterance.rate = 2.0;
                 window.speechSynthesis.speak(utterance);
             } else {
             console.log(`Text to speech not supported. Text: ${text}`);
