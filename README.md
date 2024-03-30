@@ -6,7 +6,7 @@ Detail discussions and issues will be handled in each of component repo.
 
 [Overall Discussion](https://github.com/rchung7825/justin/discussions) can be found in the tab or click the link. 
 
-We need following components:
+CUrrently, following components will be designed for the project:
 1. iOS app (iPad-mini) client
 2. A webserver for backend/API management.
 
