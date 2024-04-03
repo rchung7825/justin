@@ -90,7 +90,7 @@ struct PageControlView: View {
     // Function to speak all button labels on the current page
     func speakAllButtonLabels() {
         let buttons = contentVC.pages[currentPage].joined(separator: ", ")
-        let text = "You are now on page \(pageNumber). Buttons available on this page are: \(buttons)"
+        let text = "\(buttons)"
         let utterance = AVSpeechUtterance(string: text)
         utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 1.6 // Set to maximum speech rate
         speak(utterance)
